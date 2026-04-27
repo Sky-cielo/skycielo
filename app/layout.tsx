@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'SkyCielo - Exceptional European themed properties in Bangalore',
   description: 'SkyCielo represents the finest residential properties across Bangalore. Discover homes of extraordinary character and craftsmanship.',
   icons: {
-    icon: '/logo.png',
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`,
   },
 };
 
