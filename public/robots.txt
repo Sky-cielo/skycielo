@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.skycielo.in
+
+# Sitemaps
+Sitemap: https://www.skycielo.in/sitemap.xml

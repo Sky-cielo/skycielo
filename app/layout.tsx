@@ -9,11 +9,37 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'SkyCielo - Exceptional European themed properties in Bangalore',
-  description: 'SkyCielo represents the finest residential properties across Bangalore. Discover homes of extraordinary character and craftsmanship.',
+  title: 'SkyCielo Realty Ventures - Exceptional European Themed Properties in Bangalore',
+  description: 'SkyCielo Realty Ventures represents the finest residential plotted developments and bespoke villas across Bangalore. Discover homes of extraordinary character and craftsmanship.',
+  keywords: ['SkyCielo', 'Sky Cielo', 'SkyCielo Realty Ventures', 'Bangalore Real Estate', 'European Themed Properties', 'Villas in Bangalore', 'Plots in Bangalore', 'Luxury Real Estate Bangalore'],
+  authors: [{ name: 'SkyCielo Realty Ventures' }],
+  openGraph: {
+    title: 'SkyCielo Realty Ventures - Exceptional European Themed Properties in Bangalore',
+    description: 'SkyCielo Realty Ventures represents the finest residential properties across Bangalore. Discover homes of extraordinary character and craftsmanship.',
+    url: 'https://www.skycielo.in',
+    siteName: 'SkyCielo Realty Ventures',
+    images: [
+      {
+        url: '/logo-full.png', // Or another appropriate OG image if available
+        width: 1200,
+        height: 630,
+        alt: 'SkyCielo Realty Ventures Logo',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SkyCielo Realty Ventures - Exceptional European Themed Properties',
+    description: 'Discover homes of extraordinary character and craftsmanship in Bangalore.',
+    images: ['/logo-full.png'],
+  },
   icons: {
     icon: '/logo.png',
+    apple: '/logo.png',
   },
+  metadataBase: new URL('https://www.skycielo.in'),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
