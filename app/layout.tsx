@@ -34,14 +34,17 @@ export const metadata: Metadata = {
     'Best real estate company in Bangalore'
   ],
   authors: [{ name: 'SkyCielo Realty Ventures' }],
+  alternates: {
+    canonical: 'https://www.skycielo.in',
+  },
   openGraph: {
-    title: 'SkyCielo Realty Ventures - Exceptional European Themed Properties in Bangalore',
-    description: 'SkyCielo Realty Ventures represents the finest residential properties across Bangalore. Discover homes of extraordinary character and craftsmanship.',
+    title: 'SkyCielo Realty Ventures - Exceptional European Themed Properties',
+    description: 'SkyCielo represents the finest residential plotted developments and bespoke villas across Bangalore. Discover homes of extraordinary character.',
     url: 'https://www.skycielo.in',
     siteName: 'SkyCielo Realty Ventures',
     images: [
       {
-        url: '/logo-full.png', // Or another appropriate OG image if available
+        url: 'https://www.skycielo.in/logo-full.png',
         width: 1200,
         height: 630,
         alt: 'SkyCielo Realty Ventures Logo',
@@ -54,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SkyCielo Realty Ventures - Exceptional European Themed Properties',
     description: 'Discover homes of extraordinary character and craftsmanship in Bangalore.',
-    images: ['/logo-full.png'],
+    images: ['https://www.skycielo.in/logo-full.png'],
   },
   icons: {
     icon: '/logo.png',
