@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { useState, useCallback, useEffect } from 'react';
 import { motion, useMotionValue } from 'framer-motion';
 import VillaScroll from '@/components/VillaScroll';
@@ -155,6 +155,85 @@ export default function Home() {
           />
         </div>
       </section>
+
+      {/* ── The Visionaries (Directors) Section ── */}
+      <section style={{
+        position: 'relative',
+        padding: 'clamp(80px, 10vw, 120px) 8vw',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 'clamp(60px, 8vw, 80px)',
+        zIndex: 10,
+        overflow: 'hidden',
+      }}>
+        {/* Background Image with Overlay */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: -1 }}>
+           <Image src={asset('/european-house-bg.png')} alt="European House Background" fill className="object-cover" />
+           <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(15, 14, 12, 0.88)' }} />
+        </div>
+
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          style={{ textAlign: 'center' }}
+        >
+          <p style={{ letterSpacing: '0.3em', fontSize: 11, color: '#b59a72', textTransform: 'uppercase', marginBottom: 14 }}>
+            The Visionaries
+          </p>
+          <h2 style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: 'clamp(2.5rem, 4vw, 4rem)',
+            fontWeight: 300,
+            color: '#f5f0e8',
+            margin: '0 0 16px',
+            lineHeight: 1.15,
+          }}>
+            Meet the Directors
+          </h2>
+          <div style={{ width: 40, height: 1, background: '#b59a72', margin: '0 auto' }} />
+        </motion.div>
+
+        {/* Directors Container */}
+        <div className="flex flex-row justify-center gap-10 sm:gap-20 md:gap-32 w-full max-w-4xl mx-auto">
+            {/* Director 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="flex flex-col items-center text-center group cursor-default"
+            >
+              <div className="relative w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] md:w-[240px] md:h-[240px] rounded-full overflow-hidden border-[3px] border-[#b59a72]/40 group-hover:border-[#b59a72] group-hover:shadow-[0_0_30px_rgba(181,154,114,0.3)] transition-all duration-500 shadow-2xl mb-4 md:mb-6">
+                 <Image src={asset('/director-1.png')} alt="S M Yeshwanth" fill className="object-cover" />
+              </div>
+              <h3 className="font-['Cormorant_Garamond'] text-[1.2rem] sm:text-2xl md:text-3xl text-[#f5f0e8] mb-1 group-hover:text-white transition-colors duration-300">S M Yeshwanth</h3>
+              <p className="text-[#b59a72] uppercase tracking-[0.15em] text-[9px] sm:text-[10px] md:text-[11px] font-light">Director</p>
+            </motion.div>
+
+            {/* Director 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              className="flex flex-col items-center text-center group cursor-default"
+            >
+              <div className="relative w-[130px] h-[130px] sm:w-[180px] sm:h-[180px] md:w-[240px] md:h-[240px] rounded-full overflow-hidden border-[3px] border-[#b59a72]/40 group-hover:border-[#b59a72] group-hover:shadow-[0_0_30px_rgba(181,154,114,0.3)] transition-all duration-500 shadow-2xl mb-4 md:mb-6">
+                 <Image src={asset('/director-2.png')} alt="S M Kushal" fill className="object-cover" />
+              </div>
+              <h3 className="font-['Cormorant_Garamond'] text-[1.2rem] sm:text-2xl md:text-3xl text-[#f5f0e8] mb-1 group-hover:text-white transition-colors duration-300">S M Kushal</h3>
+              <p className="text-[#b59a72] uppercase tracking-[0.15em] text-[9px] sm:text-[10px] md:text-[11px] font-light">Director</p>
+            </motion.div>
+        </div>
+      </section>
+
+      <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, #b59a72 40%, transparent)', margin: '0 8vw', position: 'relative', zIndex: 10 }} />
 
       {/* ── About Us Sections ── */}
       <div id="about" style={{ zIndex: 10, position: 'relative', background: '#0f0e0c', color: '#f5f0e8', fontFamily: "'Inter', sans-serif" }}>
